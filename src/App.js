@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useCount } from './counter';
 
 const App = () => {
-  const [count, setCount] = useState(0);
-  const addCount = () => setCount(count + 1);
-
+  const [count, addCount] = useCount();
+  
   return (
     <div>
       <button onClick={ addCount }>+</button>
